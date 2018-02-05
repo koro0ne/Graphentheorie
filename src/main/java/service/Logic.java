@@ -65,7 +65,7 @@ public class Logic {
         String result = "";
         zusammenhaengend = true;
         for (int row = 0; row < knoten; row++) {
-            int max = -1;
+            int max = -1000;
             int min = 1000;
             int knotenAnzeigen = row + 1;
             for (int col = 0; col < knoten; col++) {
@@ -169,10 +169,10 @@ public class Logic {
                     if (before < after) {
                         int brueckeRow = row + 1;
                         int brueckeCol = col + 1;
-                        if (i % 2 == 0) {
-                            result = result + "[" + brueckeRow + ", " + brueckeCol + "] ";
+                        if (i % 3 == 0 || i % 3 == 1) {
+                            result = result + "[" + brueckeRow + ", " + brueckeCol + "]  ";
                         }
-                        if (i % 2 == 1) {
+                        if (i % 3 == 2) {
                             result = result + "[" + brueckeRow + ", " + brueckeCol + "]\n";
                         }
                         brueckeFound = true;
