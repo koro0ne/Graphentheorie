@@ -82,8 +82,8 @@ public class Logic {
                 result = result + "Knoten[" + knotenAnzeigen + "]:  " + max + "\n";
                 exzentrizitaetenVektor[row] = max;
             } else {
-                zusammenhaengend = false;
                 result = result + "Knoten[" + knotenAnzeigen + "]:  " + "\u221E" + "\n";
+                zusammenhaengend = false;
             }
         }
         return result;
@@ -240,7 +240,7 @@ public class Logic {
     }
 
 
-    public String komponentenToString() {
+    public String getKomponentenToString() {
         List<int[]> list = getKomponenten();
         String result = "";
         for (int i = 0; i < list.size(); i++) {

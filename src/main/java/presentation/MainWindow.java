@@ -234,7 +234,7 @@ public class MainWindow extends Application {
                     addItemsToGrid(gridOtherResultsC1, lb, row, 0);
                 }
                 if (row == 0 && col == 1) {
-                    lb.setText(logic.komponentenToString());
+                    lb.setText(logic.getKomponentenToString());
                     //lb.setPrefHeight(300);
                     lb.setAlignment(Pos.TOP_CENTER);
                     addItemsToGrid(gridOtherResultsC1, lb, 0, 1);
@@ -349,7 +349,7 @@ public class MainWindow extends Application {
             otherResultsLabels[2][5].setText("kein Durchmesser!");
         else
             otherResultsLabels[2][5].setText(String.valueOf(logic.getDurchmesser()));
-        otherResultsLabels[0][1].setText(logic.komponentenToString());
+        otherResultsLabels[0][1].setText(logic.getKomponentenToString());
         otherResultsLabels[4][5].setText(logic.getBruecken());
         otherResultsLabels[3][5].setText(logic.getArtikulationen());
     }
